@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>扰乱装置的个人博客</title>
+  <link type="text/css" media="screen" href="default.css" rel="stylesheet"></link>
+</head>
+<body>
+  <div id="allcontent">
+  <nav>
+    <ul>
+      <li>主 页</li>
+      <li><a>日 志</a></li>
+      <li><a>游 戏</a></li>
+      <li><a href="music.html">音 乐</a></li>
+      <li><a>电 影</a></li>
+      <li><a>留 言 板</a></li>
+    </ul>
+  </nav>
+  <aside>
+    <div id="aboutme">
+      <p>
+        <img src="images/avatar.png" alt="avatar">
+      </p>
+      <p>
+        这家伙很懒，什么都没留下。
+      </p>
+    </div>
+    <div id="archive">
+      <p>
+        归档
+      </p>
+    </div>
+  </aside>
+  <div>
+    <article id="symlink">
+      <header>
+        <h1>Linux创建软链接的问题</h1>
+        <time datetime="2018-03-20">2018年3月20日</time>
+      </header>
+      <p>
+        创建软链接时，ln -s item link，item的路径名是相对于link的相对路径。
+      </p>
+    </article>
+    <article id="ubuntu">
+      <header>
+        <h1>Ubuntu已知问题集锦</h1>
+        <time datetime="2017-12-07">2017年12月7日</time>
+      </header>
+        <h2>0 Nvidia显卡安装</h2>
+        <p>
+          sudo apt-get install nvidia-384
+        </p>
+        <h2>1 亮度调节问题</h2>
+        <p>
+          修改/etc/default/grub：
+          <blockquote>sudo gedit /etc/default/grub</blockquote>
+          将其中的
+          <blockquote>GRUB_CMDLINE_LINUX_DEFAULT="quiet splash"</blockquote>
+          改为
+          <blockquote>GRUB_CMDLINE_LINUX_DEFAULT="quiet splash acpi_backlight=vendor"</blockquote>
+          然后更新grub：
+          <blockquote>sudo update-grub</blockquote>
+          重启后在/sys/class/backlight/下多了一个ideapad的文件夹，
+          /sys/class/backlight/ideapad目录下的brightness和actual_brightness保存
+          了当前屏幕亮度值，max_brightness是屏幕最大亮度。此时即可调节亮度。
+        </p>
+        <h2>2 关机硬盘异响</h2>
+        <p>
+          修改/etc/init.d/halt的文件：
+          <blockquote>sudo gedit /etc/init.d/halt</blockquote>
+          里面有个stop函数，有几行如下
+          <blockquote>
+            log_action_msg "Will now halt"<br>
+            halt -d -f $netdown $poweroff $hddown<br>
+          </blockquote>
+            将其改为
+          <blockquote>
+            umount -a<br>
+            sleep 4<br>
+            log_action_msg "Will now halt"<br>
+            halt -d -f $netdown $poweroff $hddown<br>
+            sleep 4<br>
+          </blockquote>
+          之后关机再也没出过磁盘响的情况了，副作用是有时候关机会稍慢一点。
+        </p>
+        <h2>3 删除vim-tiny并安装vim-full</h2>
+        <p>
+          删除tiny vim：
+          <blockquote>sudo apt-get remove vim-common</blockquote>
+          安装full vim：
+          <blockquote>sudo apt-get install vim</blockquote>
+        </p>
+        <h2>4 清除更新缓存</h2>
+        <p>
+          <blockquote>
+          sudo apt-get clean<br>
+          sudo apt-get update #------更新源<br>
+          sudo apt-get upgrade #------更新已安装的包<br>
+          sudo apt-get dist-upgrade # ---------升级系统<br>
+          sudo apt autoremove<br>
+          </blockquote>
+        </p>
+    </article>
+    <article id="zelda">
+      <header>
+        <h1>塞尔达传说：梦见岛DX 攻略</h1>
+        <time datetime="2013-09-18">2013年9月18日</time>
+      </header>
+      <p>
+        这份攻略是从本人（yi）2011年6月发表于levelup.
+        im论坛（现已与xiaot论坛合并）上的图文流程攻略改编而来。流程攻略解说
+        部分未做大方向上的改动。只修正了一些错误并添加了说明要点部分的截图。
+        在此之上，还对于我所了解的部分都进行了追加和说明。希望都是正确并完善的。
+        攻略最终输出成了PDF文档。由于自己版面编排技巧尚不成熟，在此也希望大
+        家用PDF的双联显示方式来阅读本攻略。效果应该会好一些。
+        注：文中所使用的插画是网络上收集而来，据说是大师寺田克也早期给塞尔达
+        系列制作的插图。
+      <p>
+        游戏的流程部分推荐大家结合地图来进行查看。因为游戏本身的关系，每
+        一个场景都被分成了一格地图。所以配合地图坐标来描述、寻找地点是相对方
+        便的一个办法。所以流程里的地点描述我都使用了坐标。“【X-Y】”号内的
+        是世界地图坐标，普通不带方块符的都是相应迷宫内的坐标。在此特别说明一
+        下这个问题。
+      </p>
+    </article>
+  </div>
+  <footer>
+    <p>
+      &copy; 2018 luoj. ALL RIGHTS RESERVED
+    </p>
+  </footer>
+</body>
+</html>
