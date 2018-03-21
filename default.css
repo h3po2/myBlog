@@ -4,7 +4,7 @@ body {
   margin: 0px;
   padding: 0px;
   background: url(images/background.png) no-repeat center top;
-  background-size: 2000px;
+  background-size: 1500px;
   background-attachment: fixed;
 }
 
@@ -35,8 +35,7 @@ header {
   background-color: rgba(191, 191, 191, 0.9);
   width: 902px;
   padding: 0px 15px 0px 15px;
-  margin-right: auto;
-  margin-left: auto;
+  margin: 0 auto;
 }
 
 nav {
@@ -98,16 +97,36 @@ aside {
   text-align: center;
 }
 
-#archive {
+#calender {
   background-color: white;
+  border: 1px solid black;
   padding: 15px;
   width: 170px;
   height: 200px;
-  border: 1px solid;
   margin: 15px 0px 15px 0px;
+  text-align: center;
 }
 
-#ubuntu, #zelda, #symlink {
+#year_month {
+  font-size: 100%;
+  margin: 10px 0px 0px 0px;
+  font-weight: bold;
+}
+
+#date {
+  font-size: 550%;
+  font-weight: bold;
+  margin: 0px;
+  color: red;
+}
+
+#day {
+  font-size: 200%;
+  margin: 0px;
+  font-weight: bold;
+}
+
+article {
   background-color: white;
   width: 653px;
   margin: 15px 15px 15px 217px;
@@ -124,6 +143,7 @@ footer {
   width: 900px;
   height: 15px;
   background-color: #e6e6e6;
+  text-align: center;
 }
 
 footer p {
@@ -140,11 +160,11 @@ blockquote {
 
 div#tableContainer {
   display: table;
-  border-spacing: 30px;
   width: 900px;
   margin: 15px 0px 15px 0px;
   background-color: white;
   border: 1px solid black;
+  padding: 20px 0px 20px 0px;
   text-align: center;
 }
 
@@ -154,7 +174,7 @@ div.tableRow {
 
 div.tableRow div {
   display: table-cell;
-  margin: 10px;
+  margin: 0px;
   vertical-align: top;
 }
 
