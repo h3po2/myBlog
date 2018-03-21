@@ -1,4 +1,4 @@
-body {
+html, body {
   font-size: medium;
   background-color: #999999;
   margin: 0px;
@@ -6,6 +6,7 @@ body {
   background: url(images/background.png) no-repeat center top;
   background-size: 1500px;
   background-attachment: fixed;
+  height: 100%;
 }
 
 a {
@@ -18,6 +19,7 @@ h1 {
   padding: 2px;
   margin-top: 0px;
   box-shadow: 5px 5px #888888;
+  text-align: left;
 }
 
 h2 {
@@ -26,16 +28,21 @@ h2 {
 
 header {
   margin: 0px;
+  background-color: white;
 }
+
 #aboutme img {
   width: 140px;
 }
 
 #allcontent {
-  background-color: rgba(191, 191, 191, 0.9);
+  position: relative;
+  background-color: rgba(224, 224, 209, 0.9);
   width: 902px;
-  padding: 0px 15px 0px 15px;
+  padding: 0px 15px 16px 15px;
   margin: 0 auto;
+  height: auto;
+  min-height: 100%;
 }
 
 nav {
@@ -87,24 +94,22 @@ aside {
   padding: 0px;
 }
 
-#aboutme {
+#aboutme, #calender, #archive {
   background-color: white;
   padding: 15px;
   width: 170px;
-  height: 250px;
-  border: 1px solid;
+  border: 1px solid black;
   margin: 15px 0px 15px 0px;
   text-align: center;
 }
 
-#calender {
-  background-color: white;
-  border: 1px solid black;
-  padding: 15px;
-  width: 170px;
-  height: 200px;
-  margin: 15px 0px 15px 0px;
-  text-align: center;
+#archive ul {
+  list-style-type: none;
+  padding-left: 0px;
+}
+
+#archive ul li {
+  margin: 5px 0px;
 }
 
 #year_month {
@@ -126,16 +131,30 @@ aside {
   font-weight: bold;
 }
 
-article {
+article, #logs {
   background-color: white;
   width: 653px;
   margin: 15px 15px 15px 217px;
-  border: 1px solid;
+  border: 1px solid black;
   padding: 15px;
   font-size: 100%;
 }
 
+#logs ul span {
+  float:right;
+}
+
+#logs li {
+  border-top: 1px dotted black;
+  padding: 5px 0px 5px 0px;
+}
+
+#logs li:last-child {
+  border-bottom: 1px dotted black;
+}
+
 footer {
+  position: absolute;
   border: 1px solid;
   border-bottom: none;
   margin: 0px;
@@ -144,6 +163,8 @@ footer {
   height: 15px;
   background-color: #e6e6e6;
   text-align: center;
+  clear: left;
+  bottom: 0px;
 }
 
 footer p {
@@ -160,11 +181,11 @@ blockquote {
 
 div#tableContainer {
   display: table;
-  width: 900px;
+  width: 860px;
   margin: 15px 0px 15px 0px;
   background-color: white;
   border: 1px solid black;
-  padding: 20px 0px 20px 0px;
+  padding: 20px;
   text-align: center;
 }
 
@@ -174,47 +195,19 @@ div.tableRow {
 
 div.tableRow div {
   display: table-cell;
-  margin: 0px;
-  vertical-align: top;
 }
 
-div#tableContainer p {
-  margin: 5px;
+div.tableRow p {
+  margin: 5px auto;
   padding: 0px;
-  text-align: center;
+  width: 172px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-div#tableContainer img {
+div.tableRow img {
   display: block;
   border: 1px solid black;
-  margin: 0px auto;
-}
-
-div#album {
-  width: 900px;
-  height: 600px;
-  margin: 15px 0px 15px 0px;
-  padding: 0px;
-  background-color: white;
-  border: 1px solid black;
-}
-
-div#album #specific {
-  width: 202px;
   margin: 0px;
-  padding: 0px;
-  text-align: center;
-  float: left;
-}
-
-div#album img {
-  display: block;
-  border: 1px solid black;
-  margin: 15px;
-}
-
-div#album p {
-  margin: 5px;
-  padding: 0px;
-  text-align: center;
 }
