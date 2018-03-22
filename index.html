@@ -61,18 +61,8 @@
         &lt;div&gt;<br>
         main<br>
         &lt;/div&gt;<br>
-        &lt;footer&gt;<br>
-        &lt;p&gt;<br>
-        content of footer.<br>
-        &lt;/p&gt;<br>
-        &lt;/footer&gt;<br>
-        &lt;/div&gt;<br>
-        &lt;/body&gt;<br>
-        &lt;/html&gt;<br>
+        ......
       </blockquote>
-      <p>
-        先设置html和body的高度为100%；......
-      </p>
       <p id="readmore"><a href="logs/20180322.html">阅读全文</a></p>
     </article>
     <article>
@@ -90,19 +80,7 @@
       <p>
         假如有一列数，我们目的是要将其递增排列。先从第一个数a开始，将a设定为初始最小值，接着遍历后面的数，
         如果碰到一个比a更小的数，将其设定为新的最小值，接着遍历后面的数，直到后面没有比其更小的数（如果有就又将其设定为新的最小值），
-        交换新的最小值和初始最小值的位置。第二次将第二个数设定为初始最小值......重复上述操作完成排序。
-      </p>
-      <h2>2 插入排序</h2>
-      <p>
-        假如有一列数，我们目的是要将其递增排列。先从第一个数a开始，将a设定为已排过序的数，提取第一个未排序的数b，
-        将b和它前一个已排过序的数（此时为a）进行比较，如果a大于b则交换a和b的位置并插入空位（a之前的位置），此刻顺序为b,a,c,...
-        然后提取此时状态下第一个未排序的数c，将其与前面排过序的所有数（此刻为b和a）依次比较大小：若c小于a则交换两者的位置，再比较c和b的
-        大小，若b小于c，则将c插入空位（a刚刚的位置），此刻顺序为b,c,a,d,e,...提取d.....重复上述操作完成排序。
-      </p>
-      <h2>3 归并排序</h2>
-      <p>
-        假如有一列数，我们目的是要将其递增排列。将所有的数分散各自成组。将第一个组和第二组最左侧的数进行比较，申请一个新的数组，大小为刚
-        好能装下第一组和第二组，若第一组最左侧的数比第二组最左侧的数小，则将最小的复制到新数组里面，然后复制较大的数到新......
+        交换新的最小值和初始最小值的位置。第二次将第二个数设定为初始最小值......
       </p>
       <p id="readmore"><a href="logs/20180320_02.html">阅读全文</a></p>
     </article>
@@ -137,18 +115,7 @@
           <blockquote>sudo update-grub</blockquote>
           重启后在/sys/class/backlight/下多了一个ideapad的文件夹，
           /sys/class/backlight/ideapad目录下的brightness和actual_brightness保存
-          了当前屏幕亮度值，max_brightness是屏幕最大亮度。此时即可调节亮度。
-        </p>
-        <h2>2 关机硬盘异响</h2>
-        <p>
-          修改/etc/init.d/halt的文件：
-          <blockquote>sudo gedit /etc/init.d/halt</blockquote>
-          里面有个stop函数，有几行如下
-          <blockquote>
-            log_action_msg "Will now halt"<br>
-            halt -d -f $netdown $poweroff $hddown<br>
-          </blockquote>
-            ......
+          了当前屏幕亮度值......
         </p>
         <p id="readmore"><a href="logs/20171207.html">阅读全文</a></p>
     </article>

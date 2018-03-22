@@ -4,7 +4,7 @@ html, body {
   margin: 0px;
   padding: 0px;
   background: url(images/background.png) no-repeat center top;
-  background-size: 1500px;
+  background-size: 1400px;
   background-attachment: fixed;
   height: 100%;
 }
@@ -37,7 +37,7 @@ header {
 
 #allcontent {
   position: relative;
-  background-color: rgba(224, 224, 209, 0.9);
+  background-color: rgba(166, 166, 166, 0.8);
   width: 902px;
   padding: 0px 15px 16px 15px;
   margin: 0 auto;
@@ -231,7 +231,7 @@ form {
 
 form textarea {
   width: 515px;
-  height: 200px;
+  height: 150px;
   margin: 15px auto;
   border: 1px solid black;
   padding: 10px;
