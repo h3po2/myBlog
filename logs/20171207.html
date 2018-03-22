@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>扰乱装置</title>
+  <link type="text/css" media="screen" href="../default.css" rel="stylesheet"></link>
+</head>
+<body>
+  <div id="allcontent">
+  <nav>
+    <ul>
+      <li><a href="../index.html">主 页</a></li>
+      <li>日 志</li>
+      <li><a>游 戏</a></li>
+      <li><a href="../music.html">音 乐</a></li>
+      <li><a>电 影</a></li>
+      <li><a>留 言 板</a></li>
+    </ul>
+  </nav>
+  <aside>
+    <div id="archive">
+      <h1>归档</h1>
+      <ul>
+        <li><a href="../log.html">全部</a></li>
+        <li><a href="2018.html">2018年</a></li>
+        <li><a href="2017.html">2017年</a></li>
+        <li><a href="2013.html">2013年</a></li>
+      </ul>
+    </div>
+  </aside>
+  <div>
+    <article>
+      <header>
+        <h1>Ubuntu 16.04已知问题集锦</h1>
+        <time datetime="2017-12-07">2017年12月7日</time>
+      </header>
+        <h2>0 Nvidia显卡安装</h2>
+        <p>
+          sudo apt-get install nvidia-384
+        </p>
+        <h2>1 亮度调节问题</h2>
+        <p>
+          修改/etc/default/grub：
+          <blockquote>sudo gedit /etc/default/grub</blockquote>
+          将其中的
+          <blockquote>GRUB_CMDLINE_LINUX_DEFAULT="quiet splash"</blockquote>
+          改为
+          <blockquote>GRUB_CMDLINE_LINUX_DEFAULT="quiet splash acpi_backlight=vendor"</blockquote>
+          然后更新grub：
+          <blockquote>sudo update-grub</blockquote>
+          重启后在/sys/class/backlight/下多了一个ideapad的文件夹，
+          /sys/class/backlight/ideapad目录下的brightness和actual_brightness保存
+          了当前屏幕亮度值，max_brightness是屏幕最大亮度。此时即可调节亮度。
+        </p>
+        <h2>2 关机硬盘异响</h2>
+        <p>
+          修改/etc/init.d/halt的文件：
+          <blockquote>sudo gedit /etc/init.d/halt</blockquote>
+          里面有个stop函数，有几行如下
+          <blockquote>
+            log_action_msg "Will now halt"<br>
+            halt -d -f $netdown $poweroff $hddown<br>
+          </blockquote>
+            将其改为
+          <blockquote>
+            umount -a<br>
+            sleep 4<br>
+            log_action_msg "Will now halt"<br>
+            halt -d -f $netdown $poweroff $hddown<br>
+            sleep 4<br>
+          </blockquote>
+          之后关机再也没出过磁盘响的情况了，副作用是有时候关机会稍慢一点。
+        </p>
+        <h2>3 删除vim-tiny并安装vim-full</h2>
+        <p>
+          删除tiny vim：
+          <blockquote>sudo apt-get remove vim-common</blockquote>
+          安装full vim：
+          <blockquote>sudo apt-get install vim</blockquote>
+        </p>
+        <h2>4 清除更新缓存</h2>
+        <p>
+          <blockquote>
+          sudo apt-get clean<br>
+          sudo apt-get update #------更新源<br>
+          sudo apt-get upgrade #------更新已安装的包<br>
+          sudo apt-get dist-upgrade # ---------升级系统<br>
+          sudo apt autoremove<br>
+          </blockquote>
+        </p>
+    </article>
+  </div>
+
+  <footer>
+    <p>
+      &copy; 2018 luoj
+    </p>
+  </footer>
+  </div>
+</body>
+</html>

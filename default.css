@@ -113,7 +113,7 @@ aside {
 }
 
 #year_month {
-  font-size: 100%;
+  font-size: 120%;
   margin: 10px 0px 0px 0px;
   font-weight: bold;
 }
@@ -138,6 +138,12 @@ article, #logs {
   border: 1px solid black;
   padding: 15px;
   font-size: 100%;
+}
+
+#readmore {
+  text-align: right;
+  font-size: 90%;
+  margin-bottom: 0px;
 }
 
 #logs ul span {
@@ -177,6 +183,7 @@ footer p {
 
 blockquote {
   background-color: #e6e6e6;
+  font-size: 90%;
 }
 
 div#tableContainer {
