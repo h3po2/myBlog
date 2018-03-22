@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>扰乱装置</title>
+  <link type="text/css" media="screen" href="default.css" rel="stylesheet"></link>
+</head>
+<body>
+  <div id="allcontent">
+  <nav>
+    <ul>
+      <li><a href="index.html">主 页</a></li>
+      <li><a href="log.html">日 志</a></li>
+      <li><a href="games.html">游 戏</a></li>
+      <li><a href="music.html">音 乐</a></li>
+      <li><a href="movie.html">电 影</a></li>
+      <li><a>留 言 板</a></li>
+    </ul>
+  </nav>
+  <aside>
+    <div id="aboutme">
+      <p>
+        <img src="images/avatar.png" alt="avatar">
+      </p>
+      <p>
+        这家伙很懒，什么都没留下。
+      </p>
+    </div>
+    <div id="calender">
+      <p id="year_month"></p>
+      <p id="date"></p>
+      <p id="day"></p>
+    </div>
+  </aside>
+  <div>
+    <div id="form">
+    <header>
+      <h1>留言板</h1>
+    </header>
+    <form method="post">
+
+      <div class="formRow">
+        <p>
+          名字：
+        </p>
+        <input id="name" type="text" name="username">
+      </div>
+      <div class="formRow">
+        <p>
+          信息：
+        </p>
+        <textarea name="comments" row="10" cols="48"></textarea>
+      </div>
+      <div class="formRow">
+        <p></p>
+        <input type="submit" value="提交">
+      </div>
+    </form>
+    </div>
+    <div id="hiscomm">
+      <header>
+        <h1>历史留言</h1>
+      </header>
+    </div>
+  </div>
+
+  <footer>
+    <p>
+      &copy; 2018 luoj
+    </p>
+  </footer>
+  </div>
+  <script src="default.js"></script>
+</body>
+</html>
