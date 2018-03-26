@@ -94,12 +94,12 @@ aside {
   padding: 0px;
 }
 
-#aboutme, #calender, #archive {
+#aboutme, #archive {
   background-color: white;
   padding: 15px;
   width: 170px;
   border: 1px solid black;
-  margin: 15px 0px 15px 0px;
+  margin: 15px 0px;
   text-align: center;
 }
 

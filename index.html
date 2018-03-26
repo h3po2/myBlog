@@ -25,45 +25,26 @@
         <img src="images/avatar.png" alt="avatar">
       </p>
       <p>
-        这家伙很懒，什么都没留下。
+        ;-)
       </p>
-    </div>
-    <div id="calender">
-      <p id="year_month"></p>
-      <p id="date"></p>
-      <p id="day"></p>
     </div>
   </aside>
   <div>
     <article>
-      <header>
-        <h1>有关footer的解决方案</h1>
-        <time datetime="2018-03-22">2018年3月22日</time>
-      </header>
-      <p>
-        当页面内容较少无法撑起窗口高度导致footer上浮，这是需要解决的问题，另外若还要根据
-        页面的内容高度动态调整footer的位置，下面是一个解决方案。
-      </p>
-      <p>
-        html文档结构是这样的：
-      </p>
-      <blockquote>
-        &lt;!DOCTYPE html&gt;<br>
-        &lt;html lang=&quot;en&quot;&gt;<br>
-        &lt;head&gt;<br>
-        &lt;meta charset=&quot;UTF-8&quot;&gt;<br>
-        &lt;title&gt;footer的解决方案&lt;/title&gt;<br>
-        &lt;link type=&quot;text/css&quot; media=&quot;screen&quot;
-        href=&quot;footer.css&quot; rel=&quot;stylesheet&quot;&gt;&lt;/link&gt;<br>
-        &lt;/head&gt;<br>
-        &lt;body&gt;<br>
-        &lt;div id=&quot;allcontent&gt;<br>
-        &lt;div&gt;<br>
-        main<br>
-        &lt;/div&gt;<br>
-        ......
-      </blockquote>
-      <p id="readmore"><a href="logs/20180322.html">阅读全文</a></p>
+        <header>
+          <h1>绝对定位和相对定位的相关问题</h1>
+          <time datetime="2018-03-27">2018年3月27日</time>
+        </header>
+        <p>
+          元素中的子元素被设置为absolute时，其定位是相对于最近的定位元素。何为“定位元素”？
+          定位元素指的是设置过position属性的元素，默认的“static”设置不包含在内。
+        </p>
+        <p>
+          当一个元素被设置为relative，并且设置了top、left、bottom和left之类的偏移量时，它此刻的表现位置会相对于其初始位置
+          发生偏移，但其在流中的位置并不会发生改变，即还是占据原始的位置，因此它的表现位置可能会覆盖流中别的元素，但初始位置会受到
+          margin和padding的影响。
+        </p>
+      <p id="readmore"><a href="logs/20180327.html">阅读全文</a></p>
     </article>
     <article>
       <header>
@@ -151,6 +132,12 @@
     </p>
   </footer>
   </div>
-  <script src="default.js"></script>
+  <script>
+    if (99 == "99") {
+      console.log("1");
+    } else {
+      console.log("2");
+    }
+  </script>
 </body>
 </html>

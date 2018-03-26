@@ -24,22 +24,28 @@
       <h1>归档</h1>
       <ul>
         <li><a href="../log.html">全部</a></li>
-        <li>2018年</li>
+        <li><a href="2018.html">2018年</a></li>
         <li><a href="2017.html">2017年</a></li>
         <li><a href="2013.html">2013年</a></li>
       </ul>
     </div>
   </aside>
-  <div id="logs">
-    <header>
-      <h1>全部日志</h1>
-    </header>
-    <ul>
-      <li><a href="20180327.html">绝对定位和相对定位的相关问题</a><span>2018年3月27日</span></li>
-      <li><a href="20180322.html">有关footer的解决方案</a><span>2018年3月22日</span></li>
-      <li><a href="20180320_02.html">排序算法</a><span>2018年3月20日</span></li>
-      <li><a href="20180320_01.html">Linux创建软链接的问题</a><span>2018年3月20日</span></li>
-    </ul>
+  <div>
+    <article>
+      <header>
+        <h1>绝对定位和相对定位的相关问题</h1>
+        <time datetime="2018-03-27">2018年3月27日</time>
+      </header>
+      <p>
+        元素中的子元素被设置为absolute时，其定位是相对于最近的定位元素。何为“定位元素”？
+        定位元素指的是设置过position属性的元素，默认的“static”设置不包含在内。
+      </p>
+      <p>
+        当一个元素被设置为relative，并且设置了top、left、bottom和left之类的偏移量时，它此刻的表现位置会相对于其初始位置
+        发生偏移，但其在流中的位置并不会发生改变，即还是占据原始的位置，因此它的表现位置可能会覆盖流中别的元素，但初始位置会受到
+        margin和padding的影响。
+      </p>
+    </article>
   </div>
 
   <footer>
