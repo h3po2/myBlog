@@ -1,14 +1,11 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>扰乱装置</title>
   <link type="text/css" media="screen" href="default.css" rel="stylesheet"></link>
 </head>
 <body>
-  <div id="allcontent">
   <nav>
     <ul>
       <li>主 页</li>
@@ -21,23 +18,20 @@
   </nav>
   <aside>
     <div id="aboutme">
-      <p>
-        <img src="images/avatar.png" alt="avatar">
-      </p>
-      <p>
-        ;-)
-      </p>
+      <img src="images/avatar.png" alt="avatar">
+      <p>j</p>
     </div>
   </aside>
-  <div>
+  <div id="main">
     <article>
         <header>
           <h1>绝对定位和相对定位的相关问题</h1>
           <time datetime="2018-03-27">2018年3月27日</time>
         </header>
         <p>
-          元素中的子元素被设置为absolute时，其定位是相对于最近的定位元素。何为“定位元素”？
+          元素中的子元素被设置为absolute时，其定位是相对于元素树上最近的定位元素。何为“定位元素”？
           定位元素指的是设置过position属性的元素，默认的“static”设置不包含在内。
+111.230.82.224 steamcommunity.com
         </p>
         <p>
           当一个元素被设置为relative，并且设置了top、left、bottom和left之类的偏移量时，它此刻的表现位置会相对于其初始位置
@@ -124,20 +118,19 @@
       </p>
       <p id="readmore"><a href="logs/20130918.html">阅读全文</a></p>
     </article>
+    <article>
+      <header>
+        <h1>GoldenDict的css文件设置</h1>
+        <time datetime="2018-12-06">2018年12月6日</time>
+      </header>
+      <p>
+        将字典的css文件名改为article-style.css，并移动到C:\Users\j\AppData\Roaming\GoldenDict。
+      </p>
+      <p id="readmore"><a href="logs/20181206.html">阅读全文</a></p>
+    </article>
   </div>
-
   <footer>
-    <p>
-      &copy; 2018 luoj
-    </p>
+      <p>&copy; 2019 j</p>
   </footer>
-  </div>
-  <script>
-    if (99 == "99") {
-      console.log("1");
-    } else {
-      console.log("2");
-    }
-  </script>
 </body>
 </html>

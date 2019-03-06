@@ -1,78 +1,27 @@
-html, body {
-  font-size: medium;
-  background-color: #999999;
-  margin: 0px;
-  padding: 0px;
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
   background: url(images/background.png) no-repeat center top;
   background-size: 1400px;
   background-attachment: fixed;
   height: 100%;
 }
 
+body {
+  background-color: rgba(166, 166, 166, 0.8);
+  width: 900px;
+  padding: 0px 15px 40px 15px;
+  margin: 0 auto;
+  font-family: Helvetica;
+  min-height: 100%;
+  position: relative;
+}
+
 a {
   text-decoration: none;
-}
-
-h1 {
-  font-size: 120%;
-  border: 1px solid black;
-  padding: 2px;
-  margin-top: 0px;
-  box-shadow: 5px 5px #888888;
-  text-align: left;
-}
-
-h2 {
-  font-size: 100%;
-}
-
-header {
-  margin: 0px;
-  background-color: white;
-}
-
-#aboutme img {
-  width: 140px;
-}
-
-#allcontent {
-  position: relative;
-  background-color: rgba(166, 166, 166, 0.8);
-  width: 902px;
-  padding: 0px 15px 16px 15px;
-  margin: 0 auto;
-  height: auto;
-  min-height: 100%;
-}
-
-nav {
-  border: 1px solid;
-  border-top: none;
-  margin: 0px;
-  padding: 0px;
-  width: 900px;
-  height: 25px;
-  background-color: #e6e6e6;
-}
-
-nav ul {
-  margin: 0px;
-  padding: 0px;
-  list-style: none;
-  text-align: center;
-
-}
-
-nav ul li {
-  display: inline-block;
-  text-align: center;
-}
-
-nav ul li {
-  text-align: center;
-  vertical-align: middle;
-  margin: 0px 30px 0px 30px;
-  word-spacing: 25px;
 }
 
 a:link {
@@ -88,171 +37,85 @@ a:hover {
   text-decoration: underline;
 }
 
+nav {
+  width: 900px;
+  height: 25px;
+  background-color: #e6e6e6;
+}
+
+nav ul {
+  list-style: none;
+  text-align: center;
+}
+
+nav ul li {
+  display: inline-block;
+  line-height: 25px;
+  margin: 0px 30px;
+  word-spacing: 25px;
+}
+
 aside {
   float: left;
-  margin: 0px;
-  padding: 0px;
+  width: 200px;
 }
 
 #aboutme, #archive {
   background-color: white;
   padding: 15px;
   width: 170px;
-  border: 1px solid black;
   margin: 15px 0px;
   text-align: center;
 }
 
-#archive ul {
-  list-style-type: none;
-  padding-left: 0px;
+#aboutme img {
+  width: 120px;
 }
 
-#archive ul li {
-  margin: 5px 0px;
-}
 
-#year_month {
-  font-size: 120%;
-  margin: 10px 0px 0px 0px;
-  font-weight: bold;
-}
-
-#date {
-  font-size: 550%;
-  font-weight: bold;
-  margin: 0px;
-  color: red;
-}
-
-#day {
-  font-size: 200%;
-  margin: 0px;
-  font-weight: bold;
-}
-
-article, #logs, #form, #hiscomm {
+#main article,
+#logs {
   background-color: white;
-  width: 653px;
-  margin: 15px 0px 15px 217px;
-  border: 1px solid black;
+  width: 655px;
+  margin: 15px 0px 0px 215px;
   padding: 15px;
-  font-size: 100%;
+  font-size: 17px;
+}
+
+#main article h1 {
+  font-size: 20px;
+}
+
+#main article h2 {
+  font-size: 15px;
+  color: blue;
+  
+}
+
+time {
+  font-size: 14px;
+  color: gray;
 }
 
 #readmore {
   text-align: right;
-  font-size: 90%;
-  margin-bottom: 0px;
+  font-size: 14px;
 }
 
 #readmore a {
   color: red;
 }
 
-#logs ul span {
-  float:right;
-}
-
-#logs li {
-  border-top: 1px dotted black;
-  padding: 5px 0px 5px 0px;
-}
-
-#logs li:last-child {
-  border-bottom: 1px dotted black;
-}
-
 footer {
-  position: absolute;
-  border: 1px solid;
-  border-bottom: none;
-  margin: 0px;
-  padding: 0px;
   width: 900px;
-  height: 15px;
+  height: 25px;
   background-color: #e6e6e6;
-  text-align: center;
-  clear: left;
+  position: absolute;
   bottom: 0px;
 }
 
 footer p {
-  font-size: 50%;
   text-align: center;
-  vertical-align: middle;
-  margin: 0px;
-  padding: 0px;
-}
-
-blockquote {
-  background-color: #e6e6e6;
-  font-size: 90%;
-}
-
-div#tableContainer {
-  display: table;
-  width: 860px;
-  margin: 15px 0px 15px 0px;
-  background-color: white;
-  border: 1px solid black;
-  padding: 20px;
-  text-align: center;
-}
-
-div.tableRow {
-  display: table-row;
-}
-
-div.tableRow div {
-  display: table-cell;
-}
-
-div.tableRow p {
-  margin: 5px auto;
-  padding: 0px;
-  width: 172px;
-  font-size: 80%;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-div.tableRow img {
-  display: block;
-  border: 1px solid black;
-  margin: 0px;
-}
-
-form {
-  display: table;
-  padding: 10px;
-}
-
-form textarea {
-  width: 515px;
-  height: 150px;
-  margin: 15px auto;
-  border: 1px solid black;
-  padding: 10px;
-}
-
-form input#name {
-  margin: 15px auto;
-  border: 1px solid black;
-  padding: 10px;
-}
-
-div.formRow {
-  display: table-row;
-}
-
-div.formRow p {
-  display: table-cell;
-  vertical-align: top;
-  padding: 22px 0px 15px 0px;
-}
-
-div.formRow p:first-child {
-  text-align: right;
+  line-height: 25px;
+  font-size: 14px;
 }
